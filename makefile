@@ -6,8 +6,7 @@ all: clean res
 	@mkdir build
 	@mkdir build/bin
 	@${CXX} -Wall -o CardGen main.cpp src/*.cpp ${FLAGS} ${LIBS} -pthread
-	@./tools/get_dll.sh
-	@cp CardGen.exe build/bin/
+	@cp CardGen build/bin/
 	@cp -R res/* build/
 icon: clean res
 	@windres.exe src/icon.rc src/icon.o
